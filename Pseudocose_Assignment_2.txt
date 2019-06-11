@@ -1,0 +1,142 @@
+Pseudocode Assignment 2
+Jacob Lepler
+
+
+//Process Customer Record Program
+
+Declare string customerName
+Declare double purchaseAmount = 0.00, taxCode = 0
+Declare int salesTax0 = 0
+Declare double salesTax1 = 0.03 , salesTax2 = 0.05 , salesTax3 = 0.07
+Declare double calcSalesTax = 0.00
+
+Print to ask user for customerName
+Input customerName
+Print to ask user for purchaseAmount
+Input purchaseAmount
+
+If purchaseAmount > 0
+		Print to ask user for taxCode
+	else
+		Display customerName, purchaseAmount, salesTax0,
+		print "Total Amount = 0.00",
+		End if
+
+Print to ask user for taxCode
+input taxCode
+
+IF (taxCode <= 0 && taxCode < 4)
+	
+	SWITCH taxCode
+		taxCode = 0: Update calcSalesTax = (Multiply purchaseAmount by 1)	
+		taxCode = 1: Update calcSalesTax = (Multiply purchaseAmount by salesTax1)
+		taxCode = 2: Update calcSalestax = (Multiply purchaseAmount by salesTax2)
+		taxCode = 3: Update calcSalestax = (Multiply purchaseAmount by salesTax3)
+		
+	else
+		
+		"Sorry. You entered an invalid value",
+		End if
+		
+Print "Customer Name: " userName " | Purchase Amount = $" purchaseAmount " | Sales Tax = $" calcSalestax " | Total Amount: $" (purchaseAmount + calcSalestax)
+
+End Program
+
+CHECK #1
+
+Input												Output
+										
+User inputs customerName = John Dee					Program calculates purchaseAmount (124.54) * salesTax2 (0.05) = calcSalesTax = 6.23
+User inputs purchaseAmount = 124.54					Program calculates purchaseAmount + calcSalestax = 130.77
+User inputs taxCode = 2								Program prints
+														Customer Name: John Dee | Purchase Amount = $124.54 | Sales Tax = $6.23 | Total Amount = $130.77
+														
+Check #2
+
+User inputs customerName =   Danny Jacobs				Program calculates purchaseAmount (5.78) * salesTax2 (0.03) = calcSalesTax = 0.17
+User inputs purchaseAmount = 5.78						Program calculates purchaseAmount + calcSalestax = 5.95
+User inputs taxCode =        1							Program prints
+														Customer Name: John D. | Purchase Amount = $5.78 | Sales Tax = $0.17 | Total Amount = $5.95
+	
+-----------------------------------------------------------------------------------------
+
+
+
+//Calculate Employee's Pay Program
+
+Declare int employeeNumber
+Declare double payRate
+Declare double hoursWorked
+Declare double weeklyPay
+
+Print to ask user for employeeNumber
+Input employeeNumber
+Print to ask user for payRate
+Input payRate
+Print to ask user for hoursWorked
+Input hoursWorked
+
+If (payRate is > 25.00 || hoursWorked > 60.00)
+
+	Print employeeNumber, hoursWorked, and payRate,
+	"Sorry. We cannot process your weekly pay. Bye."
+
+	End If
+	
+If hoursWorked > 35.00
+
+	Display employeeNumber, hoursWorked, and payRate, 
+	weeklyPay = ((35 * payRate) + ((hoursWorked - 35.00) * (payRate * 1.5)))
+	"Weekly Pay = " weeklyPay
+
+	else
+	
+	Display employeeNumber, hoursWorked, and payRate,
+	weeklyPay = (hoursWorked * payRate)
+	"Weekly Pay = " weeklyPay
+	
+	End If
+	
+End Program
+
+Check #1
+
+Input														Output
+
+User inputs employeeNumber = 123							Program calculates payRate (35.00) * hoursWorked (35.00)
+User inputs payRate = 		 35.00							Program calculates (payRate * 1.5) or (52.50) * (hoursWorked - 35.00) or (1)
+User inputs hoursWorked = 	 36.00							Program displays employeeNumber, hoursWorked, payRate
+															"Weekly Pay = " weeklyPay = 1277.50
+															
+CHECK #2
+
+Input														Output
+
+User inputs employeeNumber = 666							Program does not validate inputs
+															Program prints
+User inputs payRate = 		 12.00							"Sorry. We cannot process your weekly pay. Bye."
+User inputs hoursWorked = 	 67.00							
+															
+
+
+----------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+	
+
+		
+	
+	
+
+	
+
+	
